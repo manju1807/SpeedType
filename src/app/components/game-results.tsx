@@ -17,7 +17,7 @@ export default function GameResults({
   handleReplay,
 }: GameResultsProps) {
 
-  const totalPoints = Math.max(0, points + earnedPoints - mistakes);
+  const totalPoints = points - mistakes + earnedPoints;
   return (
     <AlertDialog defaultOpen>
       <AlertDialogContent className='antialiased space-y-4'>
@@ -47,7 +47,8 @@ export default function GameResults({
           <p className="flex flex-col">
             <span>Total Points Calculation:</span>
             <span className="font-semibold mt-4 text-xs text-center text-muted-foreground">
-              {`Max(0, (${points} previous points) + (${earnedPoints} earned points) - (${mistakes} mistakes)) = ${totalPoints} Points`}
+              {`(${points} points) - (${mistakes} mistakes) + (${earnedPoints} earned points) = ${points - mistakes + earnedPoints
+                }`}
             </span>
           </p>
         </div>

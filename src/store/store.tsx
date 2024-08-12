@@ -6,7 +6,6 @@ type TypeWriteState = {
   earnedPoints: number;
   setPoints: (points: number) => void;
   setEarnedPoints: (earnedPoints: number) => void;
-  updatePoints: (earnedPoints: number, mistakes: number) => void;
 }
 
 export const useTypewriteStore = create<TypeWriteState>()(
@@ -16,11 +15,8 @@ export const useTypewriteStore = create<TypeWriteState>()(
       earnedPoints: 0,
       setPoints: (points) => set(() => ({ points })),
       setEarnedPoints: (earnedPoints) => set(() => ({ earnedPoints })),
-      updatePoints: (earnedPoints, mistakes) => set((state) => ({ 
-        points: Math.max(0, state.points + earnedPoints - mistakes) 
-      })),
     }), {
     name: 'global-store'
   }
   )
-)
+);
