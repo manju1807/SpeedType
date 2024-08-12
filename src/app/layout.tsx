@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: "Improve your typing speed and accuracy with SpeedType Challenge, a web-based game built with React, Next.js, and TypeScript.",
     siteName: 'SpeedType',
     images: [{
-      url: '/opengraph-image.png',
+      url: 'https://speedtype-v1.netlify.app/opengraph-image.png?2a0e71f31722dc1e',
       width: 1200,
       height: 630,
       alt: 'SpeedType Challenge - Improve Your Typing Skills',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SpeedType: Boost Typing Skills with React & Next.js',
     description: 'Improve your typing skills with our interactive game',
-    images: ['/opengraph-image.png'],
+    images: ['https://speedtype-v1.netlify.app/opengraph-image.png?2a0e71f31722dc1e'],
   },
   icons: {
     icon: '/favicon.ico',
