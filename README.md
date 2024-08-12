@@ -70,7 +70,7 @@ This project is MIT licensed.
 
 ### Video Demo
 
-https://github.com/user-attachments/assets/0652dc4d-5840-446f-856a-242edf361cdf
+https://github.com/user-attachments/assets/fb341abe-89f6-4276-96a7-7baba0662ae1
 
 ### Screenshots
 
