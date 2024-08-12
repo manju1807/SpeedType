@@ -67,7 +67,11 @@ export default function RootLayout({
       suppressHydrationWarning
       className={manrope.className}
     >
-      <head />
+      <head>
+        <link rel="alternate" hrefLang="en-US" href="https://speedtype-v1.netlify.app/en-US" />
+        <link rel="alternate" hrefLang="es-ES" href="https://speedtype-v1.netlify.app/es-ES" />
+        <link rel="alternate" hrefLang="x-default" href="https://speedtype-v1.netlify.app/" />
+      </head>
       <body className={cn('min-h-screen max-h-screen bg-background antialiased relative')}>
         <ThemeProvider
           attribute="class"
