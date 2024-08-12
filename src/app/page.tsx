@@ -7,8 +7,7 @@ import { useState, useRef, useEffect } from "react";
 import { AlertDialog, GameResultsDialog } from "@/lib/utils";
 
 export default function Home() {
-  const { points, earnedPoints, setPoints, setEarnedPoints } =
-    useTypewriteStore();
+  const { points, earnedPoints, setPoints, setEarnedPoints, updatePoints } = useTypewriteStore();
   const [mistakes, setMistakes] = useState<number>(0);
   const [input, setInput] = useState<string>("");
   const [capsLock, setCapsLock] = useState<boolean>(false);
@@ -127,7 +126,9 @@ export default function Home() {
     setStartTime(null);
     setEndTime(null);
     setCurrentText(texts[Math.floor(Math.random() * texts.length)]);
-    setPoints(points - mistakes + earnedPoints);
+    const newTotalPoints = Math.max(0, points + earnedPoints - mistakes);
+    setPoints(newTotalPoints);
+    updatePoints(earnedPoints, mistakes);
   };
 
   const renderText = (): JSX.Element[] => {

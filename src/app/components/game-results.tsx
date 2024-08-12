@@ -16,6 +16,8 @@ export default function GameResults({
   earnedPoints,
   handleReplay,
 }: GameResultsProps) {
+
+  const totalPoints = Math.max(0, points + earnedPoints - mistakes);
   return (
     <AlertDialog defaultOpen>
       <AlertDialogContent className='antialiased space-y-4'>
@@ -32,7 +34,7 @@ export default function GameResults({
           </p>
           <p className="flex justify-between">
             <span>Total Points:</span>
-            <span className="font-semibold">{points - mistakes + earnedPoints}</span>
+            <span className="font-semibold">{totalPoints}</span>
           </p>
           <p className="flex justify-between">
             <span>Points Earned:</span>
@@ -45,9 +47,7 @@ export default function GameResults({
           <p className="flex flex-col">
             <span>Total Points Calculation:</span>
             <span className="font-semibold mt-4 text-sm text-center text-muted-foreground">
-              {`(${points} points) - (${mistakes} mistakes) + (${earnedPoints} earned points) = ${
-                points - mistakes + earnedPoints
-              }`}
+              {`Max(0, (${points} points) + (${earnedPoints} earned points) - (${mistakes} mistakes)) = ${totalPoints}`}
             </span>
           </p>
         </div>
