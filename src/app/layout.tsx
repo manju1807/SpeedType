@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: 'https://speedtype-v1.netlify.app/OG-images/SpeedType-The-ultimate-Typing-Challenge.png', 
+        url: 'https://speedtype-v1.netlify.app/OG-images/SpeedType-The-ultimate-Typing-Challenge.png',
         width: 1200,
         height: 630,
         alt: 'SpeedType Challenge - Improve Your Typing Skills',
       }
     ],
     type: 'website',
-    url: 'https://speedtype-v1.netlify.app/', 
+    url: 'https://speedtype-v1.netlify.app/',
     siteName: 'SpeedType Challenge',
   },
   twitter: {
@@ -68,7 +68,7 @@ export default function RootLayout({
       className={manrope.className}
     >
       <head />
-      <body className={cn('min-h-screen bg-background antialiased relative')}>
+      <body className={cn('min-h-screen max-h-screen bg-background antialiased relative')}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -79,6 +79,7 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto py-12 sm:py-24 px-6">
             {children}
           </div>
+          <h1 className='absolute bottom-12 left-1/2 transform -translate-x-1/2 text-xs font-semibold md:text-sm text-muted-foreground'>Made with ❤️ by Manjunath R</h1>
           <Toaster position="bottom-right" richColors closeButton />
         </ThemeProvider>
       </body>

@@ -46,8 +46,8 @@ export default function GameResults({
           </p>
           <p className="flex flex-col">
             <span>Total Points Calculation:</span>
-            <span className="font-semibold mt-4 text-sm text-center text-muted-foreground">
-              {`Max(0, (${points} points) + (${earnedPoints} earned points) - (${mistakes} mistakes)) = ${totalPoints}`}
+            <span className="font-semibold mt-4 text-xs text-center text-muted-foreground">
+              {`Max(0, (${points} previous points) + (${earnedPoints} earned points) - (${mistakes} mistakes)) = ${totalPoints} Points`}
             </span>
           </p>
         </div>
