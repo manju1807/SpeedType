@@ -7,18 +7,28 @@ import { Toaster } from '@/components/ui/sonner';
 import Navbar from './components/navbar';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://speedtype-v1.netlify.app'),
   title: 'SpeedType: Boost Typing Skills with React & Next.js',
   description: "Improve your typing speed and accuracy with SpeedType Challenge, a web-based game built with React, Next.js, and TypeScript. Features real-time error tracking, WPM calculation, and a sleek UI using Tailwind CSS and Framer Motion. Ideal for coders, writers, and anyone looking to boost keyboard skills.",
   keywords: 'typing game, speed typing, typing practice, WPM calculator, keyboard skills, React typing game, Next.js app, TypeScript project, Tailwind CSS UI, Framer Motion animations, Zustand state management, web-based typing test, typing accuracy, error tracking, typing challenges, coding practice, touch typing, typing speed improvement, online typing tutor, React hooks, modern web development, responsive typing game, gamified learning, typing efficiency, keyboard proficiency',
   openGraph: {
     type: 'website',
-    title:'SpeedType',
+    url: 'https://speedtype-v1.netlify.app/',
+    title: 'SpeedType: Boost Typing Skills with React & Next.js',
+    description: "Improve your typing speed and accuracy with SpeedType Challenge, a web-based game built with React, Next.js, and TypeScript.",
     siteName: 'SpeedType',
+    images: [{
+      url: '/opengraph-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'SpeedType Challenge - Improve Your Typing Skills',
+    }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SpeedType',
+    title: 'SpeedType: Boost Typing Skills with React & Next.js',
     description: 'Improve your typing skills with our interactive game',
+    images: ['/opengraph-image.png'],
   },
   icons: {
     icon: '/favicon.ico',
@@ -46,7 +56,6 @@ export const metadata: Metadata = {
   applicationName: 'SpeedType',
   category: 'Typing Game, Typing speed challenge, Type speed checker',
 };
-
 export default function RootLayout({
   children
 }: Readonly<{
